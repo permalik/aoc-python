@@ -2,7 +2,7 @@
 
 
 def main():
-    one()
+    two()
 
 
 def one():
@@ -23,7 +23,22 @@ def one():
 
 
 def two():
-    print("running two.." + "\n\nd")
+    current_floor = 0
+    position = 0
+    with open("/home/parallels/Docs/Git/aoc/2015/001/input.txt", encoding="utf-8") as f:
+        raw_data = f.read().replace("\n", "")
+
+    chars = list(raw_data)
+    for index, char in enumerate(chars):
+        if current_floor == -1:
+            print(f"Santa is on basement floor {current_floor} at position {index}")
+            return
+        if char == "(":
+            current_floor += 1
+        elif char == ")":
+            current_floor -= 1
+        else:
+            print("Invalid floor counter.")
 
 
 if __name__ == "__main__":
