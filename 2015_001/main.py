@@ -2,6 +2,7 @@
 
 
 def main():
+    one()
     two()
 
 

@@ -10,7 +10,8 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "2015_001 = 2025_001.main:main",
+            "2015_001 = 2015_001.main:main",
+            "2015_002 = 2015_002.main:main",
         ],
     },
 )
